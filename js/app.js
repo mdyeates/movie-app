@@ -14,7 +14,7 @@ var displayMatches = (matches) => {
       // Insert HTML for each matching movie
       itemWrapper.insertAdjacentHTML(
         "beforeend",
-        `<div class="movie-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .7)),
+        `<div class="movie-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(${match.Poster})">
         <h3>${match.Title}</h3>
         <p>Release Year: ${match.Year}</p>
@@ -26,7 +26,7 @@ var displayMatches = (matches) => {
 };
 
 var getMovieData = () => {
-  // Validate search input, trim white space and account for case sensitivity
+  // This line of code gets the input from the search input field, trims any whitespace from the beginning and end, and converts it to lowercase.
   var searchText = searchInput.value.trim().toLowerCase();
 
   if (searchText) {

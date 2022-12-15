@@ -44,7 +44,7 @@ a {
 /* || CUSTOM STYLES */
 /* Header Styles */
 header {
-  padding: 20px 5%;
+  padding: 40px 5%;
   background-color: #fff;
 }
 
@@ -55,21 +55,21 @@ header nav i {
 
 header nav i {
   font-size: 1.5rem;
-  padding: 0 2px;
+  padding: 0 10px;
 }
 
 /* Content Styles */
 h1.main-header {
   text-align: center;
-  margin: 15px 0;
+  margin: 40px 0;
   color: var(--primary);
 }
 
 .search {
-  width: 350px;
-  margin-bottom: 30px;
-  padding: 10px 35px;
-  border-radius: 5px;
+  width: 40vw;
+  margin-bottom: 40px;
+  padding: 13px 35px;
+  border-radius: 30px;
   border: 1px solid var(--primary);
   outline: none;
   color: var(--primary);
@@ -83,9 +83,10 @@ h1.main-header {
 
 main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   padding: 0 5%;
+  margin-bottom: 5%;
 }
 
 main p.no-search {
@@ -95,25 +96,33 @@ main p.no-search {
 }
 
 main .movie-item {
-  border: 1px solid var(--primary);
-  border-radius: 2px;
-  padding: 15px 10px;
+  border-radius: 5px;
+  padding: 30px 30px;
+  height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+
+main .movie-item:hover {
+  scale: 1.01;
+  opacity: 0.9;
+  transition: 0.2s ease-in-out;
 }
 
 main .movie-item > *:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 main .movie-item h3,
 main .movie-item p {
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px #000;
 }
 
 main .movie-item p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
@@ -121,4 +130,18 @@ main .movie-item a {
   border-bottom: 1px dashed var(--secondary);
   color: var(--secondary);
   text-decoration: none;
+}
+
+@media (max-width: 950px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 670px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

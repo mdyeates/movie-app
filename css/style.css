@@ -1,6 +1,6 @@
 /* VARIABLES */
 :root {
-  --primary: #0e8ae3;
+  --primary: #333;
   --secondary: #ffb300;
 }
 
@@ -44,13 +44,13 @@ a {
 /* || CUSTOM STYLES */
 /* Header Styles */
 header {
-  padding: 9px 5%;
-  background-color: var(--primary);
+  padding: 20px 5%;
+  background-color: #fff;
 }
 
 header h2,
 header nav i {
-  color: #fff;
+  color: var(--primary);
 }
 
 header nav i {
@@ -68,7 +68,7 @@ h1.main-header {
 .search {
   width: 350px;
   margin-bottom: 30px;
-  padding: 7px 15px;
+  padding: 10px 35px;
   border-radius: 5px;
   border: 1px solid var(--primary);
   outline: none;
@@ -84,7 +84,7 @@ h1.main-header {
 main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 10px;
   padding: 0 5%;
 }
 
@@ -95,8 +95,8 @@ main p.no-search {
 }
 
 main .movie-item {
-  border: 3px solid var(--primary);
-  border-radius: 5px;
+  border: 1px solid var(--primary);
+  border-radius: 2px;
   padding: 15px 10px;
   background-repeat: no-repeat;
   background-size: cover;

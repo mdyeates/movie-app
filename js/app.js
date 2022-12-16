@@ -8,23 +8,21 @@ var displayMatches = (matches) => {
 
   if (!matches) {
     // If no matches were found, display a message to the user
-    itemWrapper.innerHTML = '<p class="no-search">Sorry, no movies were found matching your search.</p>';
-  } else {
-    for (var match of matches) {
-      // Insert HTML for each matching movie
-      itemWrapper.insertAdjacentHTML(
-        "beforeend",
-        `<div class="movie-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    return (itemWrapper.innerHTML = '<p class="no-search">Sorry, no movies were found matching your search.</p>');
+  }
+  for (var match of matches) {
+    // Insert HTML for each matching movie
+    itemWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="movie-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(${match.Poster})">
         <h3>${match.Title}</h3>
         <p>Release Year: ${match.Year}</p>
         <a href="https://www.imdb.com/title/${match.imdbID}" target="_blank">View More Details</a>
         </div>`
-      );
-    }
+    );
   }
 };
-
 var getMovieData = () => {
   // This line of code gets the input from the search input field, trims any whitespace from the beginning and end, and converts it to lowercase.
   var searchText = searchInput.value.trim().toLowerCase();
